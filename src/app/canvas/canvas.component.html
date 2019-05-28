@@ -1,0 +1,54 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-2" [dndList] [dndPlaceholder]="placeholder" [dndModel]="simpleList[0]">
+          <div *ngFor="let item of simpleList[0]" class="col-md-12" [dndType]="'item'" (dndMoved)="removeItem(item, simpleList[0])"
+            [dndDraggable] [dndObject]="item">{{item.name}}</div>
+        </div>
+        <div class="col-md-2">
+          <div class="row">
+            <div class="col-md-12" [dndList] [dndModel]="simpleList[1]" [dndPlaceholder]="placeholder">
+              <div *ngFor="let item of simpleList[1]" class="col-md-12" [dndType]="'item'" (dndMoved)="removeItem(item, simpleList[1])"
+                [dndDraggable] [dndObject]="item"> {{item.name}} </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12" [dndList] [dndModel]="simpleList[2]" [dndPlaceholder]="placeholder">
+              <div *ngFor="let item of simpleList[2]" class="col-md-12" [dndType]="'item'" (dndMoved)="removeItem(item, simpleList[2])"
+                [dndDraggable] [dndObject]="item"> {{item.name}} </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-md-2" [dndList] [dndPlaceholder]="placeholder" [dndModel]="simpleList[3]">
+          <div *ngFor="let item of simpleList[3]" class="col-md-12" [dndType]="'item'" (dndMoved)="removeItem(item, simpleList[3])"
+            [dndDraggable] [dndObject]="item">{{item.name}}</div>
+        </div>
+        <div class="col-md-2">
+          <div [dndList] [dndModel]="simpleList[4]" [dndPlaceholder]="placeholder">
+            <div *ngFor="let item of simpleList[4]" class="col-md-12" [dndType]="'item'" (dndMoved)="removeItem(item, simpleList[4])"
+              [dndDraggable] [dndObject]="item">{{item.name}}</div>
+          </div>
+          <div class="padd-top-20" [dndList] [dndModel]="simpleList[5]" [dndPlaceholder]="placeholder">
+            <div *ngFor="let item of simpleList[5]" class="col-md-12" [dndType]="'item'" (dndMoved)="removeItem(item, simpleList[5])"
+              [dndDraggable] [dndObject]="item">{{item.name}}</div>
+          </div>
+        </div>
+        <div class="col-md-2" [dndList] [dndPlaceholder]="placeholder" [dndModel]="simpleList[6]">
+          <div *ngFor="let item of simpleList[6]" class="col-md-12" [dndType]="'item'" (dndMoved)="removeItem(item, simpleList[6])"
+            [dndDraggable] [dndObject]="item">{{item.name}}</div>
+        </div>
+        <div class="col-md-2">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+        </div>
+        <div class="col-md-6">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="dndPlaceholder col-md-12" #placeholder></div>
+</div>
